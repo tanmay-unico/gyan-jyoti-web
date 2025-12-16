@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gyan Jyoti</title>
+    <meta name="google" content="notranslate" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="google_translate_element" style="display:none"></div>
+    <script>
+      window.googleTranslateElementInit = function () {
+        if (window.google && window.google.translate) {
+          new window.google.translate.TranslateElement(
+            {
+              pageLanguage: 'en',
+              includedLanguages: 'en,hi,bn,as,ne,or',
+              autoDisplay: false,
+              multilanguagePage: true,
+            },
+            'google_translate_element'
+          );
+        }
+      };
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+  </html>
