@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../sections/Footer";
 
 const DonatePage = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
+  const FORM_URL =
+    "https://docs.google.com/forms/d/e/1FAIpQLSeiwFBKe35NKunPUwQ5IqRY0-41lBWP2hY2g9cIve2Y0yLGjQ/viewform?embedded=true";
+
+  useEffect(() => {
+    if (!isFormOpen) return;
+
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") setIsFormOpen(false);
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    // Prevent background scroll while modal is open
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [isFormOpen]);
+
   return (
     <main className="donate-page">
       <section className="donate-hero section">
@@ -11,7 +34,9 @@ const DonatePage = () => {
             <h1 className="donate-title">Making a donation for our children.</h1>
             <p className="donate-sub">When you donate, you’re supporting effective care to children with special needs—an investment in the leaders of tomorrow.</p>
             <div className="donate-actions">
-              <button className="btn primary">Donate now</button>
+              <button className="btn primary" type="button" onClick={() => setIsFormOpen(true)}>
+                Donate now
+              </button>
             </div>
           </div>
           <div className="donate-right">
@@ -19,6 +44,30 @@ const DonatePage = () => {
           </div>
         </div>
       </section>
+
+      {isFormOpen && (
+        <div
+          className="modal-overlay"
+          role="presentation"
+          onMouseDown={(e) => {
+            if (e.target === e.currentTarget) setIsFormOpen(false);
+          }}
+        >
+          <div className="modal" role="dialog" aria-modal="true" aria-label="Donate form">
+            <button className="modal-close" type="button" aria-label="Close dialog" onClick={() => setIsFormOpen(false)}>
+              ×
+            </button>
+            <iframe
+              className="modal-iframe"
+              src={FORM_URL}
+              title="Donate - Gyan Jyoti Education Hub (Google Form)"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
+      )}
+
       <section className="donate-why section">
         <div className="container">
           <div className="why-bg" aria-hidden="true" />
