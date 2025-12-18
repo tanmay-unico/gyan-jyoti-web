@@ -1,0 +1,10 @@
+Options -MultiViews
+RewriteEngine On
+
+# If the requested resource doesn't exist as a file or directory, serve index.html (SPA fallback)
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+RewriteRule ^ index.html [L]
+
