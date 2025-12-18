@@ -5,7 +5,7 @@ const CONTRIBUTORS = [
     name: "Ms. B. Kachchap",
     role: "Retd. Principal",
     quote:
-      "Asha di has been an inspiring force since 2018, growing from a dedicated social activist into the founder of Gyan Jyoti Education Hub. Her commitment, teaching excellence, and passion for social impact have helped the institution become a trusted name in quality education.",
+      "To Asha Paul founder of Gyan Jyoti Education Hub. Your dedication, Enthusiasm and insight are really inspiring. I wish you many years of great achievement, Congratulation.",
     image: "/assets/images/contributors/contri1.png",
     align: "left",
   },
@@ -21,8 +21,8 @@ const CONTRIBUTORS = [
     name: "Mr. Biplab Gorai",
     role: "CSO",
     quote:
-      "To Asha Paul founder of Gyan Jyoti Education Hub. Your dedication, Enthusiasm and insight are really inspiring. I wish you many years of great achievement, Congratulation.",
-    image: "/assets/images/contributors/contri3.png",
+      "Asha di has been an inspiring force since 2018, growing from a dedicated social activist into the founder of Gyan Jyoti Education Hub. Her commitment, teaching excellence, and passion for social impact have helped the institution become a trusted name in quality education.",
+      image: "/assets/images/contributors/contri3.png",
     align: "left",
   },
 ];
