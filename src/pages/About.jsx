@@ -45,6 +45,16 @@ const AboutPage = () => {
     { name: "Piyush Bhakat", role: "Computer Teacher", image: "/assets/images/meet_our_team/piyush_bhakat.png" },
     { name: "Nisha Dey", role: "Activity Teacher", image: "/assets/images/meet_our_team/nisha_dey.png" },
     { name: "Himadri Bhakat", role: "Graphics Designer", image: "/assets/images/meet_our_team/himadri_bhakat.png" },
+    { name: "Ram Murmu", role: "Computer Teacher", image: "/assets/images/meet_our_team/ram_murmu.png" },
+    { name: "Laxmi Hembram", role: "Drawing Teacher", image: "/assets/images/meet_our_team/laxmi_hembram.png" },
+    { name: "Manisha Viswash", role: "Drawing Teacher", image: "/assets/images/meet_our_team/manisha_viswash.png" },
+    { name: "Prabir Hansda", role: "Social Media Incharge", image: "/assets/images/meet_our_team/prabir_hansda.png" },
+    { name: "Tanmay Singh Rajput", role: "Senior Music Teacher", image: "/assets/images/meet_our_team/tanmay_singh_rajput.png" },
+    { name: "Jothika Barik", role: "Drawing Teacher", image: "/assets/images/meet_our_team/jothika_barik.png" },
+    { name: "Baishakhi Das", role: "Teacher", image: "/assets/images/meet_our_team/baishakhi_das.png" },
+    { name: "Rakesh Manna", role: "Activity Teacher", image: "/assets/images/meet_our_team/rakesh_manna.png" },
+    { name: "Sarita Sharma", role: "Craft Teacher", image: "/assets/images/meet_our_team/sarita_sharma.png" },
+    { name: "Sarothi Mam", role: "Teacher", image: "/assets/images/meet_our_team/sarothi_mam.png" },
   ];
 
   const displayMembers = isMobile ? [...teamMembers, ...teamMembers] : teamMembers;
