@@ -342,6 +342,25 @@ body { top: 0 !important; }
 .about-page .about-eyebrow:before { display: none; }
 .about-page .about-eyebrow:after { content: ""; display: block; width: 56px; height: 2px; background: #111; margin-top: 8px; }
 
+/* What We Believe In */
+.believe-section { background:#fff; padding: 80px 0; }
+.believe-title { font-family: Poppins, Inter, InterVarFallback, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans"; font-weight: 800; font-size: 44px; color:#111; text-align: center; margin: 0 0 48px; }
+.believe-layout { display: grid; grid-template-columns: auto 1fr; gap: 60px; align-items: start; max-width: 1120px; margin: 0 auto; }
+.believe-image { display: flex; align-items: center; justify-content: center; }
+.believe-image img { width: 100%; max-width: 400px; height: auto; display: block; }
+.believe-content { display: flex; flex-direction: column; gap: 24px; }
+.believe-item { }
+.believe-value { font-family: Poppins, Inter, InterVarFallback, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans"; font-weight: 700; font-style: italic; font-size: 22px; color:#111; margin: 0 0 8px; }
+.believe-desc { font-family: "Open Sans", Inter, InterVarFallback, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans"; font-size: 16px; line-height: 1.65; color:#111; margin: 0; }
+
+@media (max-width: 900px) {
+  .believe-layout { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+  .believe-image { justify-self: center; }
+  .believe-image img { max-width: 280px; }
+  .believe-content { align-items: center; }
+  .believe-item { max-width: 600px; }
+}
+
 /* Recognitions */
 .recognitions { position: relative; background:#fff; padding: 0 0 60px; overflow:hidden; }
 .recognitions-strip { height: 48px; background: #DBF226; }

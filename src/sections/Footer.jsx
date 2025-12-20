@@ -33,7 +33,7 @@ const Footer = () => {
             <div className="footer-col">
               <div className="footer-head">Connect</div>
               <a href="https://www.facebook.com/groups/501615936284704/?ref=share&mibextid=NSMWBT" className="footer-link" target="_blank" rel="noopener noreferrer">Facebook</a>
-              <a href="https://www.facebook.com/groups/501615936284704/?ref=share&mibextid=NSMWBT" className="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://www.instagram.com/gyanjyotieducationhub?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a>
               <a href="https://www.facebook.com/groups/501615936284704/?ref=share&mibextid=NSMWBT" className="footer-link" target="_blank" rel="noopener noreferrer">Twitter</a>
               <a href="https://www.facebook.com/groups/501615936284704/?ref=share&mibextid=NSMWBT" className="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>

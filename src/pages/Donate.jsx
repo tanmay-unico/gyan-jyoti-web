@@ -1,29 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Footer from "../sections/Footer";
+import FormModal from "../components/FormModal";
 
 const DonatePage = () => {
-  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [isDonateFormOpen, setIsDonateFormOpen] = useState(false);
+  const [isVolunteerFormOpen, setIsVolunteerFormOpen] = useState(false);
 
-  const FORM_URL =
+  const DONATE_FORM_URL =
     "https://docs.google.com/forms/d/e/1FAIpQLSeiwFBKe35NKunPUwQ5IqRY0-41lBWP2hY2g9cIve2Y0yLGjQ/viewform?embedded=true";
-
-  useEffect(() => {
-    if (!isFormOpen) return;
-
-    const onKeyDown = (e) => {
-      if (e.key === "Escape") setIsFormOpen(false);
-    };
-
-    document.addEventListener("keydown", onKeyDown);
-    // Prevent background scroll while modal is open
-    const prevOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      document.removeEventListener("keydown", onKeyDown);
-      document.body.style.overflow = prevOverflow;
-    };
-  }, [isFormOpen]);
+  
+  const VOLUNTEER_FORM_URL =
+    "https://docs.google.com/forms/d/e/1FAIpQLSfwpr6pzt1GkUbgTk0u803l1hmoknLO6J8iiTaEL3BbFHSXoA/viewform?embedded=true";
 
   return (
     <main className="donate-page">
@@ -34,7 +21,7 @@ const DonatePage = () => {
             <h1 className="donate-title">Making a donation for our children.</h1>
             <p className="donate-sub">When you donate, you’re supporting effective care to children with special needs—an investment in the leaders of tomorrow.</p>
             <div className="donate-actions">
-              <button className="btn primary" type="button" onClick={() => setIsFormOpen(true)}>
+              <button className="btn primary" type="button" onClick={() => setIsDonateFormOpen(true)}>
                 Donate now
               </button>
             </div>
@@ -45,28 +32,19 @@ const DonatePage = () => {
         </div>
       </section>
 
-      {isFormOpen && (
-        <div
-          className="modal-overlay"
-          role="presentation"
-          onMouseDown={(e) => {
-            if (e.target === e.currentTarget) setIsFormOpen(false);
-          }}
-        >
-          <div className="modal" role="dialog" aria-modal="true" aria-label="Donate form">
-            <button className="modal-close" type="button" aria-label="Close dialog" onClick={() => setIsFormOpen(false)}>
-              ×
-            </button>
-            <iframe
-              className="modal-iframe"
-              src={FORM_URL}
-              title="Donate - Gyan Jyoti Education Hub (Google Form)"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
-        </div>
-      )}
+      <FormModal
+        isOpen={isDonateFormOpen}
+        onClose={() => setIsDonateFormOpen(false)}
+        formUrl={DONATE_FORM_URL}
+        title="Donate - Gyan Jyoti Education Hub (Google Form)"
+      />
+
+      <FormModal
+        isOpen={isVolunteerFormOpen}
+        onClose={() => setIsVolunteerFormOpen(false)}
+        formUrl={VOLUNTEER_FORM_URL}
+        title="Volunteer - Gyan Jyoti Education Hub (Google Form)"
+      />
 
       <section className="donate-why section">
         <div className="container">
@@ -141,11 +119,13 @@ const DonatePage = () => {
               <div className="help-shape"><img src="/assets/images/donation/volunteer_time.png" alt="Volunteer your time" /></div>
               <h3 className="help-head">Volunteer your time</h3>
               <p className="help-text">Your time is the most beautiful gift. Teach, play, mentor or simply be there. Even a few hours can plant lifelong hope in a child’s heart.</p>
-              <a className="help-link" href="#">Join as Volunteer</a>
+              <button className="help-link" type="button" onClick={() => setIsVolunteerFormOpen(true)} style={{ background: "none", border: "none", cursor: "pointer", font: "inherit" }}>
+                Join as Volunteer
+              </button>
             </div>
           </div>
           <div className="help-cta">
-            <button className="btn primary">Get Involved</button>
+            <button className="btn primary" type="button" onClick={() => setIsVolunteerFormOpen(true)}>Get Involved</button>
           </div>
           <p className="help-foot">You dont need to change the world - just change one child's world.</p>
         </div>

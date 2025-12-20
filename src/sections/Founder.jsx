@@ -39,8 +39,8 @@ const Founder = () => {
             communities and the world at large.
           </p>
           <p className="text-muted founder-sign" style={{ marginTop: 12 }}>
-            - Asha Rani Paul (Founder)<br />
-            C. M.ed. PhD (Appearing) - Physics.
+            - Dr. Asha Rani Paul (Founder)<br />
+            M.ed. PhD - Physics.
           </p>
         </div>
         <div className="founder-media">

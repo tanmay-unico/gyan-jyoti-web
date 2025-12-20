@@ -29,15 +29,22 @@ const AboutPage = () => {
   }, [isMobile]);
 
   const teamMembers = [
-    { name: "Rubi Mahato", role: "Math teacher - M.Sc B.Ed", image: "/assets/images/meet_our_team/rubi_mahato.jpg" },
-    { name: "Jeevan Kumar Yadav", role: "Content & visual communication officer - M.Com, B.Ed, CTET & STET qualified", image: "/assets/images/meet_our_team/jeevan_kumar_yadav.jpg", objectPosition: "center 45%" },
-    { name: "Piyush Bhakat", role: "B.Tech", image: "/assets/images/meet_our_team/piyush_bhakat.jpg" },
-    { name: "Prabir Hansda", role: "Social media handling", image: "/assets/images/meet_our_team/prabir_hansda.jpg" },
-    { name: "Bilpov Gorai", role: "Content & visual communication", image: "/assets/images/meet_our_team/bilpov_gorai.jpg", objectPosition: "center 10%" },
-    { name: "Ruma Ahmad", role: "Activity teacher", image: "/assets/images/meet_our_team/ruma_ahmad.jpg" },
-    { name: "Polomi Bhakat", role: "English teacher - M.A", image: "/assets/images/meet_our_team/polomi_bhakat.jpg" },
-    { name: "Chaya Rani Bhakat", role: "Yoga teacher", image: "/assets/images/meet_our_team/chaya_rani_bhakat.jpg" },
-    { name: "Rakesh Manna", role: "Graphics designer - B.A", image: "/assets/images/meet_our_team/rakesh_manna.jpg" },
+    { name: "Mohit Kumar Pal", role: "Computer Teacher", image: "/assets/images/meet_our_team/mohit_kumar_pal.png" },
+    { name: "Jeevan Kumar Yadav", role: "General Competitive Exams Educator", image: "/assets/images/meet_our_team/jeevan_kumar_yadav.png" },
+    { name: "Poulami Bhakat", role: "English Teacher", image: "/assets/images/meet_our_team/poulami_bhakat.png" },
+    { name: "Apurbo Paul", role: "Yoga Teacher", image: "/assets/images/meet_our_team/apurbo_paul.png" },
+    { name: "Rubi Mahato", role: "Maths Teacher", image: "/assets/images/meet_our_team/rubi_mahato.png" },
+    { name: "Asit Kumar Paul", role: "Competitive Exams Educator", image: "/assets/images/meet_our_team/asit_kumar_paul.png" },
+    { name: "Pratima Hembram", role: "English Teacher", image: "/assets/images/meet_our_team/pratima_hembram.png" },
+    { name: "Ruma Ahmad", role: "Activity Teacher", image: "/assets/images/meet_our_team/ruma_ahmad.png" },
+    { name: "Jotshna", role: "Notes Maker", image: "/assets/images/meet_our_team/jotshna.png" },
+    { name: "Barsha Shaw", role: "Junior Teacher", image: "/assets/images/meet_our_team/barsha_shaw.png" },
+    { name: "Biplov Gorai", role: "Content and Visual Communication", image: "/assets/images/meet_our_team/biplov_gorai.png" },
+    { name: "Chaya Rani Bhakat", role: "Yoga Teacher", image: "/assets/images/meet_our_team/chaya_rani_bhakat.png" },
+    { name: "Hari Chand", role: "Sports Teacher", image: "/assets/images/meet_our_team/hari_chand.png" },
+    { name: "Piyush Bhakat", role: "Computer Teacher", image: "/assets/images/meet_our_team/piyush_bhakat.png" },
+    { name: "Nisha Dey", role: "Activity Teacher", image: "/assets/images/meet_our_team/nisha_dey.png" },
+    { name: "Himadri Bhakat", role: "Graphics Designer", image: "/assets/images/meet_our_team/himadri_bhakat.png" },
   ];
 
   const displayMembers = isMobile ? [...teamMembers, ...teamMembers] : teamMembers;
@@ -60,9 +67,6 @@ const AboutPage = () => {
           <div className="about-video-block">
             <div className="video-card">
               <img className="video-bg" src="/assets/images/about_us/Video.png" alt="Volunteers celebrating" />
-              <button className="video-play" aria-label="Play video">
-                <img src="/assets/images/Play_icon.png" alt="Play" />
-              </button>
             </div>
           </div>
         </div>
@@ -84,6 +88,32 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
+
+        {/* What We Believe In */}
+        <section className="believe-section">
+          <div className="container">
+            <h2 className="believe-title">What We Believe In</h2>
+            <div className="believe-layout">
+              <div className="believe-image">
+                <img src="/assets/images/3Cs.png" alt="3Cs - Courage, Confidence, Creativity" />
+              </div>
+              <div className="believe-content">
+                <div className="believe-item">
+                  <h3 className="believe-value">Courage:</h3>
+                  <p className="believe-desc">We encourage children to face challenges and stand up for themselves.</p>
+                </div>
+                <div className="believe-item">
+                  <h3 className="believe-value">Confidence:</h3>
+                  <p className="believe-desc">We help learners believe in their abilities and express themselves freely.</p>
+                </div>
+                <div className="believe-item">
+                  <h3 className="believe-value">Creativity:</h3>
+                  <p className="believe-desc">We nurture imagination, curiosity, and innovative thinking.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Recognitions */}
         <section className="recognitions">
