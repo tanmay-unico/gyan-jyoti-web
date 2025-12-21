@@ -107,12 +107,12 @@ const WhatWeDo = () => {
           <h2 className="impact-title">Our Impact</h2>
           <div className="impact-strip">
             <div className="impact-item">
-              <div className="impact-num">100+</div>
+              <div className="impact-num">500</div>
               <div className="impact-label">Students</div>
             </div>
             <div className="impact-item">
-              <div className="impact-num">5+</div>
-              <div className="impact-label">Villages</div>
+              <div className="impact-num">3</div>
+              <div className="impact-label">Districts</div>
             </div>
             <div className="impact-item">
               <div className="impact-num">15+</div>

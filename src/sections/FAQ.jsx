@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const items = [
   { q: "How we spend your donation?", a: "Funds are allocated across education, development, health, and facility upgrades with quarterly audits." },
-  { q: "Where does my donation go?", a: "Directly into our programs in Assam supporting special needs children and their families." },
+  { q: "Where does my donation go?", a: "Directly into our programs in Jharkhand supporting special needs children and their families." },
   { q: "How can I volunteer or intern with the NGO?", a: "Fill the volunteer form and our team will get in touch within 48 hours." },
 ];
 
